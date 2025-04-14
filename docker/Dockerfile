@@ -1,13 +1,16 @@
-FROM python:3.13-slim
+FROM python:3.11-slim
 
-# Set the working directory in the container
+# Define diretório de trabalho
 WORKDIR /var/www
 
-# Copy the current directory contents into the container at /var/www
-COPY ../requirements.txt /requirements.txt
+# Copia os arquivos da aplicação
+COPY ../src/public .
 
-# Install any needed packages specified in requirements.txt
+# Instala as dependências
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Make port 80 available to the world outside this container
-EXPOSE 80
+# Expõe a porta padrão (caso use Django, geralmente 8000)
+EXPOSE 8000
+
+# Comando padrão (pode ser ajustado para Flask, FastAPI ou outro)
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
