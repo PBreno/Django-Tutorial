@@ -5,7 +5,7 @@ services:
       dockerfile: docker/Dockerfile
     container_name: app_web
     volumes:
-      - ../src/public:/app
+      - ../src/public:/var/www
     ports:
       - "8000:8000"
    
