@@ -1,4 +1,5 @@
-import os, sys
+import os
+import sys
 from datetime import datetime
 from pathlib import Path
 from random import choice
@@ -10,19 +11,21 @@ DJANGO_BASE_DIR = Path(__file__).parent.parent
 NUMBER_OF_OBJECTS = 1000
 
 sys.path.append(str(DJANGO_BASE_DIR))
-os.environ['DJANGO_SETTINGS_MODULE'] = 'src/public/app.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'app.settings'
 settings.USE_TZ = False
+
 django.setup()
 
 if __name__ == '__main__':
     import faker
-    from contact.models import Contact, Category
+
+    from contact.models import Category, Contact
 
     Contact.objects.all().delete()
     Category.objects.all().delete()
 
     fake = faker.Faker('pt_BR')
-    categories = ['Familia', 'Amigos', 'Conhecidos']
+    categories = ['Amigos', 'Família', 'Conhecidos']
 
     django_categories = [Category(name=name) for name in categories]
 
@@ -34,7 +37,7 @@ if __name__ == '__main__':
     for _ in range(NUMBER_OF_OBJECTS):
         profile = fake.profile()
         email = profile['mail']
-        first_name, last_name = profile['name'].split(' ',1)
+        first_name, last_name = profile['name'].split(' ', 1)
         phone = fake.phone_number()
         created_date: datetime = fake.date_this_year()
         description = fake.text(max_nb_chars=100)
@@ -53,4 +56,4 @@ if __name__ == '__main__':
         )
 
     if len(django_contacts) > 0:
-        Contact.objects.bulk_create(django_contacts)   
+        Contact.objects.bulk_create(django_contacts)
