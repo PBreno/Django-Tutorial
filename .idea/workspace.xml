@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc2289a6-6f50-431d-8416-d2167537ba0d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Django-Tutorial.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Django-Tutorial.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/contact/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/contact/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/contact/templates/contact/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/contact/templates/contact/create.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +112,7 @@
       <updated>1744243539723</updated>
       <workItem from="1744243541881" duration="6825000" />
       <workItem from="1747668747502" duration="3471000" />
-      <workItem from="1748533702126" duration="1675000" />
+      <workItem from="1748533702126" duration="4095000" />
     </task>
     <servers />
   </component>
