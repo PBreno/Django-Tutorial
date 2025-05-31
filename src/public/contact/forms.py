@@ -1,6 +1,6 @@
 from django import forms
 from django.core.exceptions import ValidationError
-from models import Contact
+from .models import Contact
 
 
 class ContactForm(forms.ModelForm):
@@ -32,7 +32,7 @@ class ContactForm(forms.ModelForm):
         cleaned_data = self.cleaned_data
         first_name = cleaned_data.get('first_name')
         last_name = cleaned_data.get('last_name')
-        msg = None
+        #msg = None
 
         if first_name == last_name:
             msg = ValidationError(
@@ -40,8 +40,8 @@ class ContactForm(forms.ModelForm):
                 code='invalid'
             )
 
-        self.add_error('first_name', msg)
-        self.add_error('last_name', msg)
+     #   self.add_error('first_name', msg)
+      #  self.add_error('last_name', msg)
 
         # self.add_error(
         #     None,
