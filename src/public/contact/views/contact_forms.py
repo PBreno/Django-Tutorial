@@ -1,12 +1,13 @@
-from django.db.models.functions import Reverse
 from django.shortcuts import render, redirect, get_object_or_404
+from django.urls import reverse
+
 from ..forms import ContactForm
 from ..models import Contact
 # Create your views here.
 
 
 def create(request):
-    form_action = Reverse('contact:create')
+    form_action = reverse('contact:create')
     if request.method == 'POST':
 
         form = ContactForm(request.POST)
@@ -33,11 +34,11 @@ def create(request):
                   context)
 
 
-def update(request, contact_id):
+def update(request, contact_id:int):
 
     contact = get_object_or_404(Contact, pk=contact_id, show=True)
-    form_action = Reverse('contact:update', args=(contact_id,))
-
+    form_action = reverse('contact:update', args=(contact_id,))
+    print('aqui ->',contact_id)
     if request.method == 'POST':
 
         form = ContactForm(request.POST, instance=contact)
@@ -62,3 +63,23 @@ def update(request, contact_id):
     return render(request,
                   'contact/create.html',
                   context)
+
+
+def delete(request, contact_id:int):
+
+    contact = get_object_or_404(Contact, pk=contact_id, show=True)
+
+    confirmation = request.POST.get('confirmation', 'no')
+
+    if confirmation == 'yes':
+        contact.delete()
+        return redirect('contact:index')
+    print('confirmation', confirmation)
+    return render(
+        request,
+        'contact/contact.html',
+        {
+            'contact': contact,
+            'confirmation': confirmation,
+        }
+    )
