@@ -38,7 +38,7 @@ def update(request, contact_id:int):
 
     contact = get_object_or_404(Contact, pk=contact_id, show=True)
     form_action = reverse('contact:update', args=(contact_id,))
-    print('aqui ->',contact_id)
+
     if request.method == 'POST':
 
         form = ContactForm(request.POST, request.FILES, instance=contact)
@@ -74,7 +74,7 @@ def delete(request, contact_id:int):
     if confirmation == 'yes':
         contact.delete()
         return redirect('contact:index')
-    print('confirmation', confirmation)
+
     return render(
         request,
         'contact/contact.html',

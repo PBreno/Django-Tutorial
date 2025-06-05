@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="bc2289a6-6f50-431d-8416-d2167537ba0d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/base_templates/global/partials/_header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/base_templates/global/partials/_header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/contact/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/contact/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/public/contact/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/contact/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/contact/views/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/contact/views/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/public/contact/views/contact_forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/contact/views/contact_forms.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,22 +47,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.docker.backend: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;17-04&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/breno.pombo/projects/Django-Tutorial&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.docker.backend: Compose Deployment.executor": "Run",
+    "Docker.docker: Compose Deployment.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "17-04",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/Users/breno.pombo/projects/Django-Tutorial/src/public/contact/views",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\breno.pombo\projects\Django-Tutorial\src\public\contact\views" />
+      <recent name="C:\Users\breno.pombo\projects\Django-Tutorial\src\public\contact\templates\contact" />
+    </key>
+  </component>
   <component name="RunManager" selected="Docker.docker: Compose Deployment">
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
@@ -116,7 +123,8 @@
       <workItem from="1744243541881" duration="6825000" />
       <workItem from="1747668747502" duration="3471000" />
       <workItem from="1748533702126" duration="4095000" />
-      <workItem from="1748619781195" duration="2111000" />
+      <workItem from="1748619781195" duration="4396000" />
+      <workItem from="1749139226982" duration="975000" />
     </task>
     <servers />
   </component>
