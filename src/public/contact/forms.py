@@ -4,19 +4,14 @@ from .models import Contact
 
 
 class ContactForm(forms.ModelForm):
-    first_name = forms.CharField(
-        widget=forms.TextInput(
-            attrs= {
-                'class': 'classe-a classe-b',
-                'placeholder': 'Aqui veio do init'}
-        ),
-        label='Primeiro Nome',
-        help_text='Texto de ajuda para seu usuário',
+
+    picture = forms.ImageField(
+        widget=forms.FileInput(
+            attrs={
+                'accept': 'image/*',
+            }
+        ), required=False
     )
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-
     class Meta:
         model = Contact
         fields = (
@@ -26,6 +21,7 @@ class ContactForm(forms.ModelForm):
             'email',
             'description',
             'category',
+            'picture',
         )
 
     def clean(self):
